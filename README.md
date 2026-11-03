@@ -84,3 +84,22 @@ https://github.com/chawsuwin99/inventory-management-system
 Chaw Su Win
 
 GitHub: https://github.com/chawsuwin99
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Products
+![Products](screenshots/products.png)
+
+### Stock Transactions
+![Stock Transactions](screenshots/stock-transactions.png)
+
+### Categories
+![Categories](screenshots/categories.png)
+
+### Suppliers
+![Suppliers](screenshots/suppliers.png)
+
+### Reports
+![Reports](screenshots/reports.png)
