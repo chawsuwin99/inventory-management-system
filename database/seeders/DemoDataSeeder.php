@@ -77,13 +77,13 @@ class DemoDataSeeder extends Seeder
 
             // 3. Use an existing user for demo transactions.
             // Never create or modify an Admin account.
-            $user = User::orderBy('id')->first();
+            $user = User::where('email', 'demo@example.com')->first();
 
-            if (!$user) {
+             if (!$user || !$user->isAdmin()) {
                 throw new \RuntimeException(
-                    'A user account is required before seeding demo data.'
-                );
-            }
+            'Please create the Demo Admin account before seeding demo data.'
+           );
+           }
 
             // 4. Products
             $products = [

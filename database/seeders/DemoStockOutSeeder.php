@@ -15,13 +15,13 @@ class DemoStockOutSeeder extends Seeder
     {
         DB::transaction(function () {
 
-            $user = User::orderBy('id')->first();
+            $user = User::where('email', 'demo@example.com')->first();
 
-            if (!$user) {
-                throw new RuntimeException(
-                    'A user account is required.'
-                );
-            }
+if (!$user || !$user->isAdmin()) {
+    throw new RuntimeException(
+        'Please create the Demo Admin account before seeding demo stock out.'
+    );
+}
 
             $stockOuts = [
                 ['sku' => 'DEMO-OFF-001', 'quantity' => 5],
